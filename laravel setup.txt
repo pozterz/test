@@ -1,0 +1,51 @@
+﻿------setup homestead------
+
+https://www.youtube.com/watch?v=r5cytqxsZf8
+
+https://deepdivetuts.com/installing-laravel-5-4-on-windows-machine-using-homestead
+
+--------add database+-------
+
+https://www.neontsunami.com/posts/create-additional-databases-in-laravel-homestead
+
+----- add phpmyadmin------------
+
+61
+down vote
+Step 1:
+
+Go to the phpMyAdmin website, download the latest version and unzip it into your code directory
+
+Step 2:
+
+Open up homestead.yaml file and add these lines
+
+folders:
+    - map: /Users/{yourName}/Code/phpMyAdmin
+      to: /home/vagrant/Code/phpMyAdmin
+sites:
+    - map: phpmyadmin.app
+      to: /home/vagrant/Code/phpMyAdmin
+Step 3:
+
+Open your hosts file and add this line: C:\Windows\System32\drivers\etc
+
+127.0.0.1 phpmyadmin.app
+Step 4:
+Go to http://phpmyadmin.app:8000.
+
+You may need to run vagrant provision to load the new configuration if vagrant is already running.
+
+--------------------- Vagrant Commad-----------------
+1.vagrant up เปิด server
+2.vagrant ssh
+3.vagrant provision อัพเดทไฟล์ใน Homestead
+4.vagrant halt ออก server
+
+
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+﻿COMMAND
+
+ดูคำสั่้ง man
+ #ls -la ดูทั้งหมด
+    ls /path ดูไฟล์ที่ต้องการ
+ #pwd
+ #shutdown -h now ปิดเครื่อง
+ #reboot   รีเครื่อง
+
+#tail -f ดูlog
+
+vi --->เขียนไฟล์
+  -ESC + :wq ออกและเซฟ
+cp กอบไฟล์
+ -f ไม่ต้องถาม
+ -R เอาไดเรททอรี่ไปด้วย
+ -cp text1 text2 ที่เดียว
+ -cp text /home/text2 ไปคนละที่ 
+* คือ เอาชื่ออะไรก็ได้
+rm ลบไฟล์
+  -fr ลบโฟล์เดอ
+mv pathต้นทาง pathปลายทาง
+
+ดูเครื่อง
+-------------------------
+top --> taskmaneger
+df  ดูฮาร์ดดิส
+du ดูพื้นที่เก็บไฟล์
+netstat -tanp, ps :grep http ดูพอร์ท
+------------------------
+updatedb อัพเดทdatabase
+locate หาไฟล์
+file ดูประเภทไฟล์
+cat แก้ไขไฟล์
+more ดูไฟล์จากด้านบน
+tail ดูไฟล์จากด่านล่าง
+| ทำ2คำสั่ง
+more เลื่อนลงมากดspacebar ได้
+------------------------
+เปลี่ยนแปลงสิทธ์
+chown ชื่อuser ชื่อไฟล์  ---> เปลี่ยนแปลงowner
+chgrp ชื่อuser ชื่อไฟล์  ---> เปลี่ยนแปลงGroup
+chmod เลข ชื่อไฟล์ 
+
+r = 2^2 =4
+w = 2^1 =2
+x = 2^0 =1 นำมารวมกัน
+------------------
+tar
+ -c create
+ -x -extract -get แตกไฟล์
+
+tar -xvf foo.tar  แตกไฟล์
+tar -xzf foo.tar.gz
+
+tar -zcvf foor.tar.gz แบ้กอัพ
+
+tar -jcvf foor.tar.bz2
+------------------------------------
+Vi command
+
+:w --->save
+:w --->exit
+:wq! --->save& exit no question
+:q! ออกโดยไม่มีการแก้ไข
+
+ssh
+vi /etc/ssh/sshd_config
+netstart -tanp|grep ssh
+แอดuser
+- useradd
+- passwd
+
+service sshd -restart
+
+--------------
+user 
+
+ตรวจสอบ user --> cat /etc/passwd หรือ cat /etc/shadow , cat /etc/group
+
+เพิ่ม user ---> adduser หรือ user add ตามด้วย username
+
+เชคว่าเราเป็นใคร --> who , whoami
+
+userdel -r user ลบuser + โฟลเดอร์ของuser 
+
+cat /etc/*release --->check ubuntu version
+
+passwd(root) ---> set password root
+
+
+

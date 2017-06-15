@@ -1,0 +1,35 @@
+﻿
+1.docker-machine ssh default
+
+2.sudo mount -t vboxsf docker (ชื่อที่ map ใน shared-folder ของ vbox) /mnt/docker
+                                                  # (ต้องสร้าง folder /mnt/docker ก่อน)
+
+3.docker images  (แสดง images ที่ pull มาแล้ว)
+
+4.docker info (แสดงข้อมูล docker)
+
+5.docker ps ดูcontainner
+
+6.docker exec -it mysql bash 
+
+7.docker cp nginx:/etc/nginx/conf.d .
+
+copy configure file ของ nginx จาก container ออกมาข้างนอก
+
+8.docker-compose up รันContainer 
+
+9.docer-compose down ลบ Container
+
+10.docker rm $(docker ps)
+
+11.docker stop $(docker ps -a -q)
+
+12.docker rm $(docker ps -a -q)
+
+13.docker rmi $(docker images -a) -f
+
+14.docker-compose start / docker-compose stop
+
+
+
+

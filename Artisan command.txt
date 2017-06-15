@@ -1,0 +1,69 @@
+---------------------Composer ------------------
+1.composer search faker ----> ค้นหา package
+
+2.composer require fzaninotto/faker --dev -->ติดตั้ง package แล้วบันทุกลง json
+
+
+---------------------Create MVc----------------
+1.php artisan make:controller PostsController
+
+2.php artisan make:model Post
+
+3.php artisan make:migration create_posts_table --create=posts
+
+4.php artisan make:model Post -mc -----> สร้างmvc คำสั่งเดียว
+
+5.composer dump-autoload && php artisan migrate:rollback ใช้ตอนลบ mgration
+
+6.php artisan migrate ----> อัพเดปลง database หลังสร้าง migration
+
+7.php artisan make:request RegistrationForm -----> สร้าง RequestForm
+
+8.php artisan make:mail WelcomAgain --markdown="emails.welcome-again"-----> สร้างmarkdown mail
+
+9.php artisan make:mail Welcome แล้วสร้าง view/emails/welcome.blade.php
+
+10.php artisan make:event SomeEvent --->สร้างEvent
+
+11.php artisan make:listener SendNotification --event="SomeEvent"
+
+12.php artisan event:generate ---> 10 และ 11 รวมกัน
+
+13.php artisan route:list ---->ดูRoute
+
+14.php artisan migrate:refresh --seed แก้ไขตาราง
+
+
+
+------------------php artisan tinker---------------
+
+1.App\Post::all() ดูข้อมูลทั้งหมด
+
+
+2.Mail::to($user = App\User::first())->send(new App\Mail\WelcomeAgian($user)); --->ทดสอบส่งmail
+
+3.$post->tags->pluck('name'); ดูชื่อเนมม manytomany
+
+4. >>> $post = App\Post::first(); ----->Add relation table
+=> App\Post {#694
+     id: 5,
+     user_id: 8,
+     title: "Mytitle",
+     body: "I am Jane Doe.",
+     created_at: "2017-05-26 11:25:02",
+     updated_at: "2017-05-26 11:25:02",
+   }
+>>> $tag = App\Tag::where('name', 'personal')->first();
+=> App\Tag {#701
+     id: 1,
+     name: "personal",
+     created_at: "2017-06-11 00:00:00",
+     updated_at: "2017-06-05 00:00:00",
+   }
+>>> $post->tags()->attach($tag);
+
+------------------------------Http Code--------------
+https://www.rfc-editor.org/rfc/rfc2616.txt
+
+https://dev.twitter.com/overview/api/response-codes ----> see error code
+

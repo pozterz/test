@@ -1,0 +1,37 @@
+﻿1.git init 
+2.git status
+3.git add .
+4.git commit -m "YOUR MESSAGE"
+5.git remote add origin https://github.com/PanupongDave/laravel.git
+6.git push -u origin master
+
+7.git remote show origin ดูว่าต่อกำลังrespoไหน
+
+8.git remote set-url origin https://github.com/PanupongDave/laravel2.git เปลี่ยนตำแหน่งrespo
+
+9.เปลี่ยนBanch git checkout -b(สร้างBranch) ชื่อBranch ใหม่ (รอบต่อไปไม่ต้องใส่ -b)
+
+10.git config --list เช็ค
+11.$ git config --global user.name "John Doe"
+   $ git config --global user.email johndoe@example.com เปลี่ยนแปลงข้อมูล
+
+12.git log ->ดู commit id 
+
+13.git reset --hard ใส่ commit id รีเซท commit
+
+14.git pull PanupongDave master ---->update เมื่อมีการเปปลี่ยนแปลง 
+
+15.git clone https://github.com/PanupongDave/laravelLearning.git
+
+16.git checkout -b ชื่อBranch 
+
+17.git merge testlogin (ต้องเป็นbranchที่จะใส่)
+
+18.git show-branch
+
+19.git diff ดูการเปลี่ยนแปลง Code
+
+20.git branch -d ชื่อBranch ลบ branch
+
+21. git push ori vragin --delete ชื่อBranch
+ 
