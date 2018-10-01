@@ -33,5 +33,5 @@
 
 20.git branch -d ชื่อBranch ลบ branch
 
-21. git push ori vragin --delete ชื่อBranch
+21. git push origin --delete ชื่อBranch
  
